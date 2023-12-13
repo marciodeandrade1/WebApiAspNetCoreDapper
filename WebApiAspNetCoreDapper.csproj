@@ -14,7 +14,7 @@
 
   <ItemGroup>
     <Folder Include="Context\" />
-    <Folder Include="Repository\" />
+    <Folder Include="Controllers\" />
   </ItemGroup>
 
 </Project>
