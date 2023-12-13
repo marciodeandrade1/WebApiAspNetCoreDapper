@@ -16,7 +16,7 @@
     <Folder Include="Context\" />
     <Folder Include="Contracts\" />
     <Folder Include="Dto\" />
-    <Folder Include="Entities\" />
+    <Folder Include="Repository\" />
   </ItemGroup>
 
 </Project>

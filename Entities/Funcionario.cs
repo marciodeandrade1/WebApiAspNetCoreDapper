@@ -1,4 +1,4 @@
-﻿namespace WebApiAspNetCoreDapper.Repository
+﻿namespace WebApiAspNetCoreDapper.Entities
 {
     public class Funcionario
     {
