@@ -1,23 +1,23 @@
 ﻿using Microsoft.Extensions.Configuration;
 using System.Data;
-using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
+
 
 namespace WebApiAspNetCoreDapper.Context
 {
-    public class DapperContext : Dapp
+    public class DapperContext
     {
+        private readonly IConfiguration _configuration;
         private readonly string _connectionString;
 
-        public DapperContext(IConfiguration configuration, string connectionStringName)
+        public DapperContext(IConfiguration configuration)
         {
-            _connectionString = configuration.GetConnectionString(connectionStringName);
+            _configuration = configuration;
+            _connectionString = _configuration.GetConnectionString("SqlConnection");
         }
 
-        public IDbConnection GetConnection()
-        {
-            return new SqlConnection(_connectionString);
-        }
-
-        // Outros métodos para interagir com o banco usando Dapper
+        public IDbConnection CreateConnection()=> new SqlConnection(_connectionString);
     }
+
 }
+
