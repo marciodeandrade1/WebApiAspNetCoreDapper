@@ -6,6 +6,7 @@ namespace WebApiAspNetCoreDapper.Repository
 {
     public class EmpresaRepository : IEmpresaRepository
     {
+        
         public Task<Empresa> CreateEmpresa(EmpresaForCreationDto empresa)
         {
             throw new NotImplementedException();
